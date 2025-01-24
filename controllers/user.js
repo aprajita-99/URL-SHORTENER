@@ -26,6 +26,7 @@ async function handleLogIn(req,res){
             loginError : "Invalid email or Password!"
         });
     }
+    console.log(user);
     const token = setuser(user);
     res.cookie('uid',token);
     return res.redirect("/");
